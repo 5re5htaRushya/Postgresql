@@ -1,0 +1,25 @@
+<p>Hello</p>
+
+ <table>
+ <tr>
+ <th>appl_id</th>
+ <th>loan_type</th>
+ <th>gender</th>
+ <th>tot_child</th>
+ <th>family_status</th>
+ </tr>
+
+         <% result.forEach(function (users) {%>
+             <tr>
+             
+                <td><%= users.appl_id  %> </td>
+                <td><%= users.loan_type %> </td>
+                <td><%= users.gender %> </td>
+                <td> <%= users.tot_child %></td>
+                <td> <%= users.family_status %></td>
+             </tr>
+           
+	                                
+         <% }) %>
+</table>
+       

@@ -1,0 +1,37 @@
+ <form name="InventoryList" method="post" action="InventoryList.asp">
+          <select name="SelBranch" class="bnotes" size="5" multiple="multiple">
+          <option value="All">All</option>
+          <option value="001 Renton">001 Renton</option>
+          <option value="002 Spokane">002 Spokane</option>
+          <option value="003 Missoula">003 Missoula</option>
+          <option value="004 Chehalis">004 Chehalis</option>
+          <option value="005 Portland">005 Portland</option>
+          <option value="006 Anchorage">006 Anchorage</option>
+          <option value="018 PDC">018 PDC</option>
+          </select>
+
+         <input type="button" name="ViewReport" value="View" class="bnotes" onclick="GetInventory();">
+
+   </form>
+
+
+   <script language="JavaScript">
+       function GetInventory()
+       {
+         var InvForm = document.forms.InventoryList;
+         var SelBranchVal = "";
+         var x = 0;
+
+         for (x=0;x<=InvForm.SelBranch.length;x++)
+         {
+            if (InvForm.SelBranch[x].selected)
+            {
+             //alert(InvForm.SelBranch[x].value);
+             SelBranchVal = SelBranchVal + "," + InvForm.SelBranch[x].value;
+            }
+         }
+         alert(SelBranchVal);
+       }
+
+
+  </script>

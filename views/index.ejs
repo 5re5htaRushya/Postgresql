@@ -1,0 +1,118 @@
+<p>Hello</p>
+
+<form action="/index" method="post">
+Loan Type:
+
+<select name="loan_type" class="ui dropdown">
+<option value="">Select</option>
+
+<% result[0].rows.forEach(function (users) {%>
+             
+           <option value="'<%=users.loan_type%>'"> <%= users.loan_type  %> </option>
+           
+	                                
+         <% }) %>
+ </select><br>
+
+ gender:<br>
+
+ <% result[1].rows.forEach(function (users) {%>
+             
+               <input type="radio" name="gender" id="<%= users.gender  %>" value="'<%= users.gender  %>'"> <%= users.gender  %> <br>
+           
+	                                
+         <% }) %>
+
+ Own_car:<br>
+
+ <% result[2].rows.forEach(function (users) {%>
+
+ <input type="radio" name="own_car" id="<%=users.own_car%>" value="'<%=users.own_car%>'"> <%= users.own_car%><br>
+	
+
+     <% }) %> 
+
+
+Own_realty:<br>
+
+ <% result[3].rows.forEach(function (users) {%>
+
+ <input type="radio" name="own_realty" id="<%=users.own_realty%>" value="'<%=users.own_realty%>'"> <%= users.own_realty%><br>
+	
+
+     <% }) %> 
+
+ Suite Type:
+
+<select name="suite_type" class="ui dropdown">
+<option value="">Select</option>
+
+<% result[4].rows.forEach(function (users) {%>
+             
+           <option value="'<%=users.suite_type%>'"> <%= users.suite_type  %> </option>
+           
+	                                
+         <% }) %>
+ </select><br>
+
+  Income Type:
+
+<select name="income_type" class="ui dropdown">
+<option value="">Select</option>
+
+<% result[5].rows.forEach(function (users) {%>
+             
+           <option value="'<%=users.income_type%>'"> <%= users.income_type  %> </option>
+           
+	                                
+         <% }) %>
+ </select><br>
+
+ Education Level:
+
+<select name="edu_level" class="ui dropdown">
+<option value="">Select</option>
+
+<% result[6].rows.forEach(function (users) {%>
+             
+           <option value="'<%=users.edu_level%>'"> <%= users.edu_level  %> </option>
+           
+	                                
+         <% }) %>
+ </select><br>
+
+  Phone:<br>
+
+ <% result[7].rows.forEach(function (users) {%>
+
+ <input type="radio" name="phone" id="<%=users.phone%>" value="<%=users.phone%>"> <%= users.phone%><br>
+	
+
+     <% }) %>
+
+   Email:<br>
+
+ <% result[8].rows.forEach(function (users) {%>
+
+ <input type="radio" name="email" id="<%=users.email%>" value="<%=users.email%>"> <%= users.email%><br>
+	
+
+     <% }) %>
+
+    
+   
+        <input type="submit" value="search">
+</form>
+
+
+
+ 
+
+         <% /*result[0].forEach(function (users) { */%>
+             
+                 <% /*= users.Name *.%> <br>
+                 <% /*= users.Age */%> <br>
+           
+	                                
+         <%/* }) */%>
+

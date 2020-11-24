@@ -1,0 +1,26 @@
+<p>Hello</p>
+
+ <table>
+ <tr>
+ <th>shop_date</th>
+ <th>prod_code</th>
+ <th>cust_code</th>
+ <th>cust_price_sensitivity</th>
+ <th>cust_lifestage</th>
+ </tr>
+
+         <% result.forEach(function (users) {%>
+             <tr>
+             
+                <td><%= users.shop_date  %> </td>
+                <td><%= users.prod_code %> </td>
+                <td><%= users.cust_code %> </td>
+                <td> <%= users.cust_price_sensitivity %></td>
+                <td> <%= users.cust_lifestage %></td>
+             </tr>
+           
+	                                
+         <% }) %>
+</table>
+       
+                 
